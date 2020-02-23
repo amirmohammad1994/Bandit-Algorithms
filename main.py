@@ -22,4 +22,5 @@ params = [{
 "number_of_exploration_per_arm" : 100,
 },]
 
+
 createBanditInstancesAndSimulate(params,n_sim)
