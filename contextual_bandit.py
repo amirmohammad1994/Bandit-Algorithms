@@ -3,24 +3,14 @@ from bandit import Bandit
 
 class ContextualBandit(Bandit):
     #
-    arms_mu = []
-    totalReward = 0
-    totalRegret = 0
-    time = 0
-    best_mu = 0
-    rewards = []
-    regrets = []
+    contexts = []
+    arm_context[]
     #
     def __init__(self,time_horizon,number_of_arms,agent):
-        self.time_horizon = time_horizon
-        self.number_of_arms = number_of_arms
-        self.agent = agent
-        self.initEnviroment()
+      super().__init__()
     #
     def initEnviroment(self):
-        for i in range(self.number_of_arms):
-            self.arms_mu.append(i+1)
-        self.best_mu = self.number_of_arms
+      super().initEnviroment()
     #
     def reset(self):
         self.totalReward = 0
@@ -33,7 +23,11 @@ class ContextualBandit(Bandit):
     def createArm(self,sample_name,mu):
         return
     #
+    def contextReveal(self):
+        return 0
+    #
     def step(self):
+
         choosed_arm = self.agent.decide(self.time,self.time_horizon,self.number_of_arms)
 
         reward = np.random.normal(self.arms_mu[choosed_arm],1)        

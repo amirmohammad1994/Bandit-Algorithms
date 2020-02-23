@@ -10,6 +10,7 @@ class EpsilonGreedy(Agent):
         self.number_of_arms = number_of_arms
         self.epsilons = epsilons
         self.reset()
+        self.name = "epsilon-greedy"
     #
     def reset(self):
         self.mu_estimators = [0]*self.number_of_arms

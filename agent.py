@@ -1,4 +1,5 @@
 class Agent:
+    name = ''
     def __init__(self):
         return
     def reset(self):

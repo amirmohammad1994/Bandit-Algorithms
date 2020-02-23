@@ -3,7 +3,7 @@ from util import *
 import numpy as np
 
 
-def mc_simulate(n,bandit):
+def mc_simulate(n,bandit,label=''):
     result = {}
     result['totalReward'] = 0
     result['totalRegret'] = 0
@@ -11,7 +11,7 @@ def mc_simulate(n,bandit):
     result['regrets'] = np.array(result['regrets'])
     result['rewards'] = [0]*bandit.time_horizon
     result['rewards'] = np.array(result['rewards'])
-
+    result['name'] = bandit.agent.name + ' ' + label
     for i in range(n):
         bandit.reset()
         bandit.simulate()
