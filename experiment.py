@@ -20,6 +20,7 @@ def createBanditInstancesAndSimulate(params,n_mc_sim):
         epsilon_greedy_constant_half_epsilonAgent = EpsilonGreedy(time_horizon,number_of_arms,[1/2]*time_horizon)
         epsilon_greedy_constant_epsilonAgent = EpsilonGreedy(time_horizon,number_of_arms,[number_of_exploration_per_arm*number_of_arms/time_horizon]*time_horizon)
         ubc_agent = UBC1Agent(time_horizon,number_of_arms)
+
         bandit = Bandit(time_horizon,number_of_arms,exp_agent)
         results.append(mc_simulate(n_sim,bandit))
 
