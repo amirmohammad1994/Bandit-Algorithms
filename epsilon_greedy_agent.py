@@ -16,6 +16,7 @@ class EpsilonGreedy(Agent):
         self.mu_estimators = [0]*self.number_of_arms
         self.best_arm = 0
         self.arms_visited = [0]*self.number_of_arms
+        print('epsilon-greedy agent started to decide.')
 
     #
     def decide(self,time,time_horizon,number_of_arms):

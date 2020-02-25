@@ -17,6 +17,7 @@ class UBC1Agent(Agent):
         self.best_arm = 0
         self.arms_visited = [0]*self.number_of_arms
         self.ubc = [0]*self.number_of_arms
+        print('ubc1 agent started to decide.')
 
     #
     def decide(self,time,time_horizon,number_of_arms):

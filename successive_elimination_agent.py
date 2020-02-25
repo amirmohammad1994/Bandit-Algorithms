@@ -22,6 +22,7 @@ class SuccessiveEliminationAgent(Agent):
         self.lbc = [0]*self.number_of_arms
         self.active_arms = np.arange(self.number_of_arms)
         self.active_arms_snapshot = np.arange(self.number_of_arms)
+        print('successive-elimination agent started to decide.')
     #
     def decide(self,time,time_horizon,number_of_arms):
         arm = 0

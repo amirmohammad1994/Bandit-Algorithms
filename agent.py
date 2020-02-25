@@ -5,6 +5,7 @@ class Agent:
     def __init__(self):
         return
     def reset(self):
+        print('random agent started to decide.')
         return
     def decide(self,time,time_horizon,number_of_arms):
          return np.random.randint(number_of_arms)
