@@ -1,12 +1,14 @@
-##bandit algorithms
+#bandit algorithms
 
 //python3 numpy matplotlib 
-```$ python main.py
+
+```
+$ python main.py
 ```
 
-##amir-esi-rad implementation
+#amir-esi-rad implementation
 graph.ipynb
 
 
-##report
+#report
 rl-practical.pdf
